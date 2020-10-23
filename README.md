@@ -10,29 +10,29 @@ Created originally with chatterbot version 1.0.8.
 
 ## Use instructions
 
-chatbot.py
+__chatbot.py__
 
 Configuration file for language independency, example configuration using SQLite database. Internal / external terminal input / output only. Call me Amelia! (or what ever you like ...)
 
 Use included list trainer or corpus trainer by changing configuration 
 "trainer": "none" -> "list" or "corpus"
 
-learning_chatbot.py
+__learning_chatbot.py__
 
 Train chatbot from Chatterbot Corpus, create SQLite database.
 
-run_chatbot.py
+__run_chatbot.py__
 
 Run basic chatbot from SQLite database - read_only.
 
-export_chatbot.py
+__export_chatbot.py__
 
 Export training from SQLite database to JSON export file.
 
-import_chatbot.py
+__import_chatbot.py__
 
 Import training from YAML or JSON export file to SQLite database.
 
-feedback_learning_chatbot.py
+__feedback_learning_chatbot.py__
 
 Feedback learning chatbot using SQLite database.
