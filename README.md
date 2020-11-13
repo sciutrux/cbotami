@@ -36,3 +36,7 @@ Import training from YAML or JSON export file to SQLite database.
 __feedback_learning_chatbot.py__
 
 Feedback learning chatbot using SQLite database.
+
+## Notice
+
+Updated version of "botami" which was based on ChatterBot 0.7.6. Some utility functions added.
