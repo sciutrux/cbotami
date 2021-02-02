@@ -3,11 +3,15 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
+# override Chatterbot PosLemmaTagger
+from tagging import CustomPosLemmaTagger
+
 import os.path
 
 import logging
 # logging.basicConfig(level=logging.ERROR)
 logging.basicConfig(level=logging.INFO)
+# logging.basicConfig(level=logging.DEBUG)
 
 print('Import training from YAML or JSON export file to SQLite database')
 
@@ -27,6 +31,11 @@ bot = ChatBot(
     'Import Bot',
     storage_adapter = 'chatterbot.storage.' + storageAdapter,
     database_uri = "sqlite:///" + database_file)
+
+# override Chatterbot PosLemmaTagger get_bigram_pair_string function
+# POS tags were not suitable for how conversations are processed
+custom_tagger = CustomPosLemmaTagger()
+bot.storage.tagger.get_bigram_pair_string = custom_tagger.get_bigram_pair_string
 
 trainer = ChatterBotCorpusTrainer(bot)
 
