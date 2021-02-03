@@ -43,6 +43,4 @@ Feedback learning chatbot using SQLite database.
 
 ## Notice
 
-Updated version of "botami" which was based on ChatterBot 0.7.6. Some utility functions added.
-
 Includes own logic adapter and some function overrides.
