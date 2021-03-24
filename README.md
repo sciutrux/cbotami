@@ -41,6 +41,12 @@ __feedback_learning_chatbot.py__
 
 Feedback learning chatbot using SQLite database.
 
+__teach_cbotami.py__
+
+Feedback learning using cbotami class and defined SQLite DB.
+Create conversation from sentence and response similarly as with
+Chatterbot Corpus trainer, including POS tagging.
+
 ## Notice
 
 Includes own logic adapter and some function overrides.

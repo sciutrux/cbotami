@@ -81,3 +81,44 @@ class CBotAmI():
 
     def get_response(self, sentence):
         return self.bot.get_response(sentence)
+
+    def learn_response(self, response, sentence):
+
+        # create statement pair similarly to corpus trainer
+        # chatterbot method creates single line with no tagging
+        statements_to_create = []
+        
+        statement_search_text = self.bot.storage.tagger.get_bigram_pair_string(sentence)
+
+        statement = Statement(
+            text=sentence,
+            search_text=statement_search_text,
+            in_response_to=None,
+            search_in_response_to='',
+            conversation='training'
+        )
+
+        # statement.add_tags(*categories)
+
+        # statement = get_preprocessed_statement(statement)
+
+        statements_to_create.append(statement)
+
+        response_search_text = self.bot.storage.tagger.get_bigram_pair_string(response.text)
+
+        response_statement = Statement(
+            text=response.text,
+            search_text=response_search_text,
+            in_response_to=statement.text,
+            search_in_response_to=statement_search_text,
+            conversation='training'
+        )
+
+        # statement.add_tags(*categories)
+
+        # statement = get_preprocessed_statement(statement)
+
+        statements_to_create.append(response_statement)
+
+        self.bot.storage.create_many(statements_to_create)
+        # return self.bot.learn_response(response, sentence)
