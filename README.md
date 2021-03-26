@@ -17,10 +17,6 @@ Configuration file for language independency, example configuration using SQLite
 Use included list trainer or corpus trainer by changing configuration 
 "trainer": "none" -> "list" or "corpus"
 
-__cbotami.py__
-
-Class implementation of a chatbot.
-
 __learning_chatbot.py__
 
 Train chatbot from Chatterbot Corpus, create SQLite database.
@@ -42,6 +38,14 @@ __feedback_learning_chatbot.py__
 Feedback learning chatbot using SQLite database.
 
 Notice: not updated to work with new configuration - depreciated
+
+__cbotami.py__
+
+Class implementation of a chatbot.
+
+__run_cbotami.py__
+
+Run chatbot class implementation using SQLite database.
 
 __teach_cbotami.py__
 
