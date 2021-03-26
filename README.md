@@ -41,6 +41,8 @@ __feedback_learning_chatbot.py__
 
 Feedback learning chatbot using SQLite database.
 
+Notice: not updated to work with new configuration - depreciated
+
 __teach_cbotami.py__
 
 Feedback learning using cbotami class and defined SQLite DB.

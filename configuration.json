@@ -1,14 +1,17 @@
 {
     "database_uri": "sqlite:///chatterbot_database.sqlite3",
-    "storageAdapter": "SQLStorageAdapter",
-    "botName": "Amelia",
+    "storage_adapter": "SQLStorageAdapter",
+    "bot_name": "Amelia",
     "trainer_type": "none",
-    "readOnly": true,
+    "read_only": true,
     "specificResponseAdapter": {
-      "input_text": "Help",
-      "output_text": "I am a friendly chatbot! How may I help you?"
+      "input_text": "Help!",
+      "output_text": "How may I help you?"
     },
-    "nameInquiry": "Hello! What is your name?",
-    "initialGreeting": "Nice to meet you!",
-    "maximumSimilarityThreshold": 0.90
+    "bestMatch": {
+        "default_response": "What?",
+        "maximum_similarity_threshold": 0.70
+    },
+    "name_inquiry": "Hello! What is your name?",
+    "initial_greeting": "Hi"
   }

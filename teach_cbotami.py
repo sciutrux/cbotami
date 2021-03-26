@@ -20,7 +20,7 @@ def get_feedback():
         return get_feedback()
 
 # Read configuration file
-with open("chatbot_configuration.json") as json_file:
+with open("configuration.json") as json_file:
         config_data = json.load(json_file, object_hook = lambda d: namedtuple('X', d.keys())(*d.values()))
 
 read_only = False
