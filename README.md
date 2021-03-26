@@ -47,6 +47,11 @@ __run_cbotami.py__
 
 Run chatbot class implementation using SQLite database.
 
+__run_cbotami_tts.py__
+
+Run chatbot class implementation using SQLite database.
+Includes chatbot text-to-speech capability using pyttsx3 conversion library.
+
 __teach_cbotami.py__
 
 Feedback learning using cbotami class and defined SQLite DB.
